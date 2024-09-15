@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <title>Закрывающий тег</title>
     <link rel="icon" href="./images/favicon.ico" sizes="any">    
     <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./images/mobile-icon.png">    
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
-    <link rel="stylesheet" href="./styles/themes.css" />
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/globals.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+    <link rel="stylesheet" href="./styles/themes.css">
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
     <header class="header">
       <div class="header__logo-group">
-        <p class="heading">&lt;/HTML&gt;</p>
-        <h1 class="header__title">закрывающий тег</h1>
+        <a class="heading text-uppercase text-center">&lt;/HTML&gt;</a>
+        <h1 class="header__title text-uppercase text-center">закрывающий тег</h1>
       </div>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
-        <ul class="theme-menu__list">
+        <ul class="theme-menu__list text-left">
           <li class="theme-menu__item">
-            <button type="button" data-theme="dark" class="theme-menu__button">
+            <button type="button" data-theme="dark" class="button theme-menu__button text-uppercase">
               Темно
             </button>
           </li>
@@ -35,13 +35,13 @@
               type="button"
               data-theme="auto"
               disabled
-              class="theme-menu__button"
+              class="button theme-menu__button text-uppercase"
             >
               Авто
             </button>
           </li>
           <li class="theme-menu__item">
-            <button type="button" data-theme="light" class="theme-menu__button">
+            <button type="button" data-theme="light" class="button theme-menu__button text-uppercase">
               Светло
             </button>
           </li>
@@ -52,7 +52,9 @@
       <article class="section">         
         <h2 class="section__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <div class="section__cover">
-          <p class="section__label">&lt;/HTML&gt;</p>
+          <span class="section__label text-uppercase" aria-hidden="true">&lt;/HTML&gt;</span>
+          <img class="cover-image" src="./images/car_696-696.png"
+          alt="изображение дом на колесах на фоне ночного неба" loading="lazy">
         </div>
         <div class="section__content"> 
           <div class="text-block">  
@@ -60,7 +62,7 @@
             <p class="section__text">Место для ваших воспоминаний о начале обучения.</p>
           </div>
           <div class="section__buttons">
-            <button class="card__icon-button">
+            <button type="button" class="button card__icon-button">
               <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none">
                 <g class="heart">  
                   <path class="contour" fill="var(--like-contour-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -70,15 +72,16 @@
                   <path class="sparks" fill="var(--like-fill-color)" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"/>
               </svg>
             </button>           
-            <button class="card__like-button content__button"><span class="button__text">Like</span></button>
+            <button type="button" class="button card__like-button content__button"><span class="button__text">Like</span></button>
           </div>  
         </div>            
       </article>
       <article class="section">         
         <h2 class="section__title">1 спринт: Я — чистый лист</h2>
         <div class="section__cover">
-          <p class="section__label">&lt;/HTML&gt;</p>
-          <div class="filter-greyscale"></div>
+          <span class="section__label text-uppercase" aria-hidden="true">&lt;/HTML&gt;</span>          
+          <img class="cover-image filter-greyscale" src="./images/car_696-696.png"
+          alt="изображение дом на колесах на фоне ночного неба с фильтром оттенки серого" loading="lazy">          
         </div>
         <div class="section__content"> 
           <div class="text-block">  
@@ -86,7 +89,7 @@
             <p class="section__text">Место для ваших воспоминаний о начале обучения.</p>
           </div>
           <div class="section__buttons">
-            <button class="card__icon-button">
+            <button type="button" class="button card__icon-button">
               <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none">
                 <g class="heart">  
                   <path class="contour" fill="var(--like-contour-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -96,15 +99,16 @@
                   <path class="sparks" fill="var(--like-fill-color)" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"/>
               </svg>
             </button>           
-            <button class="card__like-button content__button"><span class="button__text">Like</span></button>
+            <button type="button" class="button card__like-button content__button"><span class="button__text">Like</span></button>
           </div>  
         </div>            
       </article>
       <article class="section">         
         <h2 class="section__title">1 спринт: А если не получится?</h2>
         <div class="section__cover">
-          <p class="section__label">&lt;CSS&gt;</p>
-          <div class="filter-saturate"></div>
+          <span class="section__label text-uppercase" aria-hidden="true">&lt;CSS&gt;</span>
+          <img class="cover-image filter-saturate" src="./images/car_696-696.png"
+          alt="изображение дом на колесах на фоне ночного неба с фильтром увеличенния яркости" loading="lazy">
         </div>
         <div class="section__content"> 
           <div class="text-block">  
@@ -112,7 +116,7 @@
             <p class="section__text">Место для ваших воспоминаний о начале обучения.</p>
           </div>
           <div class="section__buttons">
-            <button class="card__icon-button">
+            <button type="button" class="button card__icon-button">
               <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none">
                 <g class="heart">  
                   <path class="contour" fill="var(--like-contour-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -122,15 +126,16 @@
                   <path class="sparks" fill="var(--like-fill-color)" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"/>
               </svg>
             </button>           
-            <button class="card__like-button content__button"><span class="button__text">Like</span></button>
+            <button type="button" class="button card__like-button content__button"><span class="button__text">Like</span></button>
           </div>  
         </div>            
       </article>
       <article class="section">         
         <h2 class="section__title">2 спринт: Погоня за идеалом</h2>
         <div class="section__cover">
-          <p class="section__label">&lt;desigions&gt;</p>
-          <div class="filter-hue-rotate"></div>
+          <span class="section__label" aria-hidden="true">&lt;desigions&gt;</span>
+          <img class="cover-image filter-hue-rotate" src="./images/car_696-696.png"
+          alt="изображение дом на колесах на фоне ночного неба с фильтром ротации цвета" loading="lazy">        
         </div>       
         <div class="section__content"> 
           <div class="text-block">  
@@ -138,7 +143,7 @@
             <p class="section__text">Место для ваших воспоминаний о начале обучения.</p>
           </div>
           <div class="section__buttons">
-            <button class="card__icon-button">
+            <button type="button" class="button card__icon-button">
               <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none">
                 <g class="heart">  
                   <path class="contour" fill="var(--like-contour-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -148,15 +153,16 @@
                   <path class="sparks" fill="var(--like-fill-color)" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"/>
               </svg>
             </button>           
-            <button class="card__like-button content__button"><span class="button__text">Like</span></button>
+            <button type="button" class="button card__like-button content__button"><span class="button__text">Like</span></button>
           </div>  
         </div>            
       </article>
       <article class="section">         
         <h2 class="section__title">2 спринт: О тех, кто рядом</h2>
         <div class="section__cover">
-          <p class="section__label">care</p>
-          <div class="filter-invert"></div>
+          <span class="section__label" aria-hidden="true">care</span>
+          <img class="cover-image filter-invert" src="./images/car_696-696.png"
+          alt="изображение дом на колесах на фоне ночного неба с фильтром инверсии цветов" loading="lazy">
         </div>
         <div class="section__content"> 
           <div class="text-block">  
@@ -164,7 +170,7 @@
             <p class="section__text">Место для ваших воспоминаний о начале обучения.</p>
           </div>
           <div class="section__buttons">
-            <button class="card__icon-button">
+            <button type="button" class="button card__icon-button">
               <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none">
                 <g class="heart">  
                   <path class="contour" fill="var(--like-contour-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -174,15 +180,16 @@
                   <path class="sparks" fill="var(--like-fill-color)" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"/>
               </svg>
             </button>           
-            <button class="card__like-button content__button"><span class="button__text">Like</span></button>
+            <button type="button" class="button card__like-button content__button"><span class="button__text">Like</span></button>
           </div>  
         </div>            
       </article>
       <article class="section">         
         <h2 class="section__title">3 спринт: Обходные стратегии</h2>
         <div class="section__cover">
-          <p class="section__label">&lt;support&gt;</p>
-          <div class="filter-sepia"></div>
+          <span class="section__label" aria-hidden="true">&lt;support&gt;</span>
+          <img class="cover-image filter-sepia" src="./images/car_696-696.png"
+          alt="изображение дом на колесах на фоне ночного неба с фильтром старая фотография" loading="lazy">
         </div>        
         <div class="section__content"> 
           <div class="text-block">  
@@ -190,7 +197,7 @@
             <p class="section__text">Место для ваших воспоминаний о начале обучения.</p>
           </div>
           <div class="section__buttons">
-            <button class="card__icon-button">
+            <button type="button" class="button card__icon-button">
               <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none">
                 <g class="heart">  
                   <path class="contour" fill="var(--like-contour-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -200,15 +207,16 @@
                   <path class="sparks" fill="var(--like-fill-color)" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"/>
               </svg>
             </button>           
-            <button class="card__like-button content__button"><span class="button__text">Like</span></button>
+            <button type="button" class="button card__like-button content__button"><span class="button__text">Like</span></button>
           </div>  
         </div>            
       </article>
       <article class="section">         
         <h2 class="section__title">3 спринт: Когда опускаются руки</h2> 
           <div class="section__cover">
-            <p class="section__label">&lt;lifes-style: none;&gt;</p>
-            <div class="filter-blur"></div>
+            <span class="section__label" aria-hidden="true">&lt;lifes-style: none;&gt;</span>
+            <img class="cover-image filter-blur" src="./images/car_696-696.png"
+            alt="изображение дом на колесах на фоне ночного неба с фильтром размытия" loading="lazy">
           </div>
         <div class="section__content"> 
           <div class="text-block">  
@@ -216,7 +224,7 @@
             <p class="section__text">Место для ваших воспоминаний о начале обучения.</p>
           </div>
           <div class="section__buttons">
-            <button class="card__icon-button">
+            <button type="button" class="button card__icon-button">
               <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none">
                 <g class="heart">  
                   <path class="contour" fill="var(--like-contour-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -226,15 +234,16 @@
                   <path class="sparks" fill="var(--like-fill-color)" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"/>
               </svg>
             </button>           
-            <button class="card__like-button content__button"><span class="button__text">Like</span></button>
+            <button type="button" class="button card__like-button content__button"><span class="button__text">Like</span></button>
           </div>  
         </div>            
       </article>
       <article class="section">         
         <h2 class="section__title">«Сейчас я здесь»</h2>
         <div class="section__cover">
-          <p class="section__label">&lt;experience&gt;</p>
-          <div class="filter-multiple"></div>
+          <span class="section__label" aria-hidden="true">&lt;experience&gt;</span>
+          <img class="cover-image filter-multiple" src="./images/car_696-696.png"
+          alt="изображение машины дом на колесах на фоне ночного неба с фильтрами яркости, цветности, четкости и инверсии" loading="lazy">
         </div>        
         <div class="section__content"> 
           <div class="text-block">  
@@ -242,7 +251,7 @@
             <p class="section__text">Место для ваших воспоминаний о начале обучения.</p>
           </div>
           <div class="section__buttons">
-            <button class="card__icon-button">
+            <button type="button" class="button card__icon-button">
               <svg class="like-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="36" fill="none">
                 <g class="heart">  
                   <path class="contour" fill="var(--like-contour-color)" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"/>
@@ -252,37 +261,31 @@
                   <path class="sparks" fill="var(--like-fill-color)" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z"/>
               </svg>
             </button>           
-            <button class="card__like-button content__button"><span class="button__text">Like</span></button>
+            <button type="button" class="button card__like-button content__button"><span class="button__text">Like</span></button>
           </div>  
         </div>            
-      </article>   
-    </main>
-    <footer class="footer">
+      </article>    
       <button 
         type="button"
         onclick="window['dialog-id'].showModal();"
         aria-controls="dialog-id"
-        class="footer__button content__button">
-        <!-- <div class="svg-floppy"> -->
-          <svg class="svg-floppy" width="21px" height="21px">
-            <use href="#floppy" class="floppy">
-          </svg>
-        <!-- </div> -->
+        class="button save__button content__button">        
+          <svg class="svg-floppy svg-floppy-save" viewBox="0 0 21 21" width="21px" height="21px">            
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>        
         <span class="button__text">Сохранить на память</span>
-      </button>  
-    </footer>
+      </button>   
+    </main>
     <dialog class="dialog" id="dialog-id">
       <div class="dialog__title-block">
-        <div>
-          <svg width="39px" height="39px">
-            <use href="#svg-floppy" class="svg-floppy">
+          <svg class="svg-floppy" viewBox="0 0 39 39" width="39px" height="39px">            
+            <use href="./svg/floppy.svg#svg-floppy"></use>
           </svg>
-        </div>      
-        <h3 class="dialog__title">Вставьте
+        <h3 class="dialog__title text-uppercase">Вставьте
         дискету, чтобы продолжить</h3>
       </div>      
       <button
-        class="close-button content__button"
+        class="button close-button content__button text-uppercase"
         type="button"
         onclick="window['dialog-id'].close();"
         >
@@ -292,17 +295,3 @@
     <script src="./scripts/like.js"></script>
   </body>
 </html>
-
-<svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
-  <symbol id="floppy" fill="currentColor" stroke="currentColor">
-    <path fill="#000" d="M0 0h1.615v1.615H0zM0 1.615h1.615V3.23H0zM0 3.231h1.615v1.615H0zM0 4.846h1.615v1.615H0zM0 6.461h1.615v1.615H0zM0 8.077h1.615v1.615H0zM0 9.692h1.615v1.615H0zM0 11.308h1.615v1.615H0zM0 12.923h1.615v1.615H0zM0 14.539h1.615v1.615H0zM0 16.154h1.615v1.615H0zM0 17.769h1.615v1.615H0zM0 19.385h1.615V21H0zM17.77 0v1.615h-1.616V0zM16.154 0v1.615h-1.615V0zM14.539 0v1.615h-1.615V0zM12.923 0v1.615h-1.615V0zM11.308 0v1.615H9.693V0zM9.692 0v1.615H8.077V0zM8.077 0v1.615H6.462V0zM6.462 0v1.615H4.847V0zM4.846 0v1.615H3.231V0zM3.23 0v1.615H1.617V0zM19.385 1.616V3.23H17.77V1.616zM4.846 3.23v1.616H3.231V3.23zM4.846 1.615V3.23H3.231V1.615zM4.846 4.846v1.615H3.231V4.846zM16.154 3.231v1.615h-1.615V3.231zM16.154 1.615V3.23h-1.615V1.615zM16.154 4.846v1.615h-1.615V4.846zM12.923 3.23v1.616h-1.615V3.23zM12.923 1.615V3.23h-1.615V1.615zM12.923 4.846v1.615h-1.615V4.846zM16.154 6.462v1.615H14.54V6.462zM14.539 6.462v1.615h-1.615V6.462zM12.924 6.461v1.615h-1.615V6.461zM11.308 6.462v1.615H9.693V6.462zM9.693 6.461v1.615H8.078V6.461zM8.077 6.462v1.615H6.462V6.462zM6.462 6.462v1.615H4.847V6.462zM4.847 6.461v1.615H3.232V6.461zM17.769 11.307v1.615h-1.615v-1.615zM16.153 11.308v1.615h-1.615v-1.615z"/>
-    <path fill="#000" d="M14.538 11.308v1.615h-1.615v-1.615zM12.923 11.307v1.615h-1.615v-1.615zM11.307 11.308v1.615H9.692v-1.615zM9.692 11.307v1.615H8.077v-1.615zM8.076 11.308v1.615H6.461v-1.615zM6.461 11.308v1.615H4.846v-1.615zM4.846 11.307v1.615H3.23v-1.615zM17.77 12.923v1.615h-1.616v-1.615zM4.846 12.923v1.615H3.231v-1.615z"/>
-    <path fill="#000" d="M17.769 14.538v1.615h-1.615v-1.615zM4.846 14.538v1.615H3.23v-1.615zM17.77 16.153v1.615h-1.616v-1.615zM4.846 16.154v1.615H3.231v-1.615zM4.846 17.769v1.615H3.231v-1.615zM17.77 17.769v1.615h-1.616v-1.615zM19.384 19.385V21H17.77v-1.615zM17.77 19.384V21h-1.616v-1.615zM16.154 19.385V21h-1.615v-1.615zM14.538 19.385V21h-1.615v-1.615zM12.923 19.385V21h-1.615v-1.615zM11.307 19.385V21H9.692v-1.615zM9.692 19.385V21H8.077v-1.615zM8.077 19.385V21H6.462v-1.615zM6.461 19.385V21H4.846v-1.615zM4.846 19.385V21H3.231v-1.615zM3.23 19.385V21H1.617v-1.615zM21 21h-1.615v-1.615H21zM21 19.385h-1.615V17.77H21zM21 17.769h-1.615v-1.615H21zM21 16.154h-1.615v-1.615H21zM21 14.538h-1.615v-1.615H21zM21 12.923h-1.615v-1.615H21zM21 11.307h-1.615V9.692H21z"/>
-    <path fill="#000" d="M21 9.693h-1.615V8.078H21zM21 8.077h-1.615V6.462H21zM21 6.462h-1.615V4.847H21zM21 4.846h-1.615V3.231H21z"/>
-  </symbol>
-</svg>
-
-<svg viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg">
-  <symbol id="svg-floppy" fill="currentColor" stroke="currentColor">
-    <path fill="currentColor" d="M.5.5h3v3h-3zM.5 3.5h3v3h-3zM.5 6.5h3v3h-3zM.5 9.5h3v3h-3zM.5 12.5h3v3h-3zM.5 15.5h3v3h-3zM.5 18.5h3v3h-3zM.5 21.5h3v3h-3zM.5 24.5h3v3h-3zM.5 27.5h3v3h-3zM.5 30.5h3v3h-3zM.5 33.5h3v3h-3zM.5 36.5h3v3h-3zM33.5.5v3h-3v-3zM30.5.5v3h-3v-3zM27.5.5v3h-3v-3zM24.5.5v3h-3v-3zM21.5.5v3h-3v-3zM18.5.5v3h-3v-3zM15.5.5v3h-3v-3zM12.5.5v3h-3v-3zM9.5.5v3h-3v-3zM6.5.5v3h-3v-3zM36.5 3.5v3h-3v-3zM9.5 6.5v3h-3v-3zM9.5 3.5v3h-3v-3zM9.5 9.5v3h-3v-3zM30.5 6.5v3h-3v-3zM30.5 3.5v3h-3v-3zM30.5 9.5v3h-3v-3zM24.5 6.5v3h-3v-3zM24.5 3.5v3h-3v-3zM24.5 9.5v3h-3v-3zM30.5 12.5v3h-3v-3zM27.5 12.5v3h-3v-3zM24.5 12.5v3h-3v-3zM21.5 12.5v3h-3v-3zM18.5 12.5v3h-3v-3zM15.5 12.5v3h-3v-3zM12.5 12.5v3h-3v-3zM9.5 12.5v3h-3v-3zM33.5 21.5v3h-3v-3zM30.5 21.5v3h-3v-3zM27.5 21.5v3h-3v-3zM24.5 21.5v3h-3v-3zM21.5 21.5v3h-3v-3zM18.5 21.5v3h-3v-3zM15.5 21.5v3h-3v-3zM12.5 21.5v3h-3v-3zM9.5 21.5v3h-3v-3zM33.5 24.5v3h-3v-3zM9.5 24.5v3h-3v-3zM33.5 27.5v3h-3v-3zM9.5 27.5v3h-3v-3zM33.5 30.5v3h-3v-3zM9.5 30.5v3h-3v-3zM9.5 33.5v3h-3v-3zM33.5 33.5v3h-3v-3zM36.5 36.5v3h-3v-3zM33.5 36.5v3h-3v-3zM30.5 36.5v3h-3v-3zM27.5 36.5v3h-3v-3zM24.5 36.5v3h-3v-3zM21.5 36.5v3h-3v-3zM18.5 36.5v3h-3v-3zM15.5 36.5v3h-3v-3zM12.5 36.5v3h-3v-3zM9.5 36.5v3h-3v-3zM6.5 36.5v3h-3v-3zM39.5 39.5h-3v-3h3zM39.5 36.5h-3v-3h3zM39.5 33.5h-3v-3h3zM39.5 30.5h-3v-3h3zM39.5 27.5h-3v-3h3zM39.5 24.5h-3v-3h3zM39.5 21.5h-3v-3h3zM39.5 18.5h-3v-3h3zM39.5 15.5h-3v-3h3zM39.5 12.5h-3v-3h3zM39.5 9.5h-3v-3h3z"/>  </symbol>
-</svg>

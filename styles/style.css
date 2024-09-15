@@ -17,13 +17,16 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  max-inline-size: 1440px;
-  padding: 100px 0;
+  max-inline-size: 100%;
+  padding: 100px 0 0 0;
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: 'wght' var(--main-font-weight);
-  color: var(--accent-color); 
-  background-color: var(--background-color);   
-  background-image: var(--background);
+  font-variation-settings: 'wght' var(--main-font-weight, 400);
+  color: var(--accent-color, #000); 
+  background-color: var(--background-color, #fff);   
+  background-image: var(--background, 
+      repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, #d3d3d300 2px, #d3d3d300 4px),
+      repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, #d3d3d300 2px, #d3d3d300 4px),
+      linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%));
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -34,20 +37,17 @@
 }
 
 .header {
-  width: var(--width);
-  max-height: 368px;
-  border: 2px solid var(--accent-color);
+  width: var(--width, min(100%, 700px));
+  border: 2px solid var(--accent-color, #000);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
   gap: 25px;
-  /* padding-top: 136px; */
   padding-top: clamp(7.5rem, 1.502vw + 7.148rem, 8.5rem);
   padding-bottom: 25px;
-  background-color: var(--background-color);
-  font-family: var(--accent-font);
-  /* overflow: hidden; */
+  background-color: var(--background-color, #fff);
+  font-family: var(--accent-font, sans-serif);
 }
 
 .header__logo-group {
@@ -59,20 +59,28 @@
 .heading {  
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);  
   line-height: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  text-align: center;  
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .header__title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  text-transform: uppercase;
-  text-align: center;
 }
 
 .theme-menu__list {
   font-size: 14px;
   line-height: 14px;
-  text-align: left; 
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -81,13 +89,19 @@
   padding-left: 20px;
 }
 
-.theme-menu__button {
+.button {
   position: relative;
   background-color: transparent;
+  cursor: pointer;  
+  font-family: var(--accent-font, sans-serif);
+  font-size: 14px;
+  border: 2px solid var(--accent-color, #000);
+  transition: 0.3s ease;
+}
+
+.theme-menu__button {
   border: none;
-  text-transform: uppercase;
-  outline: none;  
-  cursor: pointer;
+  outline: none;
 }
 
 .theme-menu__button::after {
@@ -96,7 +110,7 @@
   display: block;
   width: calc(100% - 12px);
   height: 2px;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #000);
   transition: 0.3s ease;
   transform: scaleX(0);
   transform-origin: left;  
@@ -136,17 +150,8 @@
     background-color: transparent;
     position: absolute;
     transform: translateX(-24px);    
-    animation: translateX 0.5s ease-in-out alternate infinite;
+    animation: move-left-right 0.5s ease-in-out alternate infinite;
   }
-
- @keyframes translateX {
-  0% {
-    transform: translateX(-24px);
-  }
-  100% {
-    transform: translateX(-20px);
-  }
- } 
 
 .content {
   display: grid;
@@ -157,42 +162,32 @@
 }
 
 .section {
-  width: var(--width);
+  width: var(--width, min(100%, 700px));
   display: flex;
   flex-direction: column;
-  background-color: var(--background-color);
+  background-color: var(--background-color, #fff);
   font-size: 18px;
   line-height: 21px;
-  text-align: left;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color, #000);
 }
 
 .section__title {
   padding: 5px 10px;
   font-size: 18px;
-  font-variation-settings: 'wght' 700;
-  border-bottom: 2px solid var(--accent-color);
+  font-variation-settings: 'wght' var(--accent-font-weight, 700);
+  border-bottom: 2px solid var(--accent-color, #000);
 }
 
 .section__cover {
   position: relative;
-  /* width: 100%; */
-  width: var(--width);
-  /* height: 700px; */
-  /* padding: 25px 25px 0 0; */
-  background-image: url(../images/car_696-696.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  /* border-bottom: 2px solid var(--accent-color); */  
-  overflow: hidden;
-  aspect-ratio: 1 / 1; 
+  display: flex;
 }
 
-.filter-blur {
-  width: 100%;
-  height: 100%; 
-  backdrop-filter: blur(1rem);  
+.cover-image {
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  /* aspect-ratio: 1 / 1; */
 }
 
 .section__label {
@@ -200,72 +195,64 @@
   z-index: 1;
   top: 25px;
   right: 25px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   line-height: 14px;
   text-align: right;
   opacity: 50%;
   mix-blend-mode: hard-light;
   text-shadow: 
-    -1px 1px var(--background-color),
-    1px 1px var(--background-color),
-    -1px -1px var(--background-color),
-    1px -1px var(--background-color);
-}
-
-.filter-greyscale {
-  width: 100%;
-  height: 100%;
-  backdrop-filter: grayscale(75%);
-}
-
-.filter-saturate {
-  width: 100%;
-  height: 100%;
-  backdrop-filter: saturate(500%);
-}
-
-.filter-hue-rotate {
-  width: 100%;
-  height: 100%;
-  backdrop-filter: hue-rotate(30deg);
-}
-
-.filter-invert {
-  width: 100%;
-  height: 100%;
-  backdrop-filter: invert(0.75);
-}
-
-.filter-sepia {
-  width: 100%;
-  height: 100%;
-  backdrop-filter: sepia(0.9);
-}
-
-.filter-multiple {
-  width: 100%;
-  height: 100%;
-  backdrop-filter: hue-rotate(90deg) contrast(0.5) saturate(1.25) brightness(1.25) opacity(1) blur(2px);  
+    -1px 1px var(--background-color, #fff),
+    1px 1px var(--background-color, #fff),
+    -1px -1px var(--background-color, #fff),
+    1px -1px var(--background-color, #fff);
 }
 
  /* "text-stroke" выглядит сильно хуже макета, 
- т.к. обводка заезжает на текст, который и так тонкий. */
+ т.к. обводка заезжает на текст, который и так тонкий.
+ Сказали игнорировать визуальное несоответствие. */
  
-/* @supports((text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))) {
+ @supports(-webkit-text-stroke: 1px var(--background-color, #fff)) {
   .section__label {
-      -webkit-text-stroke: 1px var(--background-color);
-      text-stroke: 1px var(--background-color);
+      -webkit-text-stroke: 1px var(--background-color, #fff);
       text-shadow: none;
   }
-}  */
+} 
+
+.filter-blur {
+  filter: blur(1rem);  
+}
+
+.filter-greyscale {
+  filter: grayscale(75%);
+}
+
+.filter-saturate {
+  filter: saturate(500%);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(30deg);
+}
+
+.filter-invert {
+  filter: invert(0.75);
+}
+
+.filter-sepia {
+  filter: sepia(0.9);
+}
+
+.filter-multiple {
+  filter: hue-rotate(90deg) contrast(0.5) saturate(1.25) brightness(1.25) opacity(1) blur(2px);  
+}
 
 .section__content {
   display: flex;
   flex-direction: column;
   padding: 25px;
   gap: 25px;
-  border-top: 2px solid var(--accent-color);
+  border-top: 2px solid var(--accent-color, #000);
 }
 
 .text-block {
@@ -282,115 +269,22 @@
 }
 
 .card__icon-button {
-  cursor: pointer;
-  background-color: transparent;
   outline: none;
   border: 2px solid transparent;
-  transition: 0.3s ease;
   padding: 0;
   transform: scale(0.9);
   height: 42px;
+  display: flex;
+  align-items: center;
 }
 
 .card__icon-button:focus-visible {
-  border-color: var(--accent-color);
+  border-color: var(--accent-color, #000);
 }
 
 .card__like-button {
-  position: relative;
   width: 130px;
-  height: 38px;
-  padding: 9px 17px;
-  font-family: var(--accent-font);
-  font-size: 14px;
-  background-color: transparent;
-  border: 2px solid var(--accent-color);
-  transition: 0.3s ease;
-  cursor: pointer;  
-}
-
-.contour {
-  transition: fill .1s linear;
-}
-
-.main-body {
-  transition: fill .3s linear;
-}
-
-.core {
-  transition: fill .3s .03s linear;
-}
-
-.sparks {
-  opacity: 0;
-}
-
-.like-icon:hover .core{  
-  transition: fill .3s linear;
-  fill: var(--accent-color);  
-}
-
-.like-icon:hover .main-body{  
-  transition: fill .5s .05s linear;
-  fill: var(--accent-color);
-}
-
-.like-icon:active .core{
-  fill: var(--like-fill-color);  
-  transition: fill .3s linear;
-}
-
-.like-icon:active .main-body{
-  fill: var(--like-fill-color);  
-  transition: fill .5s .05s linear;
-}
-
-.like-icon:active .contour{
-  fill: var(--like-fill-color);  
-  transition: fill .3s .11s linear;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--like-fill-color);
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--like-fill-color);
-}
-
-.like-icon.is-liked .core {
-  fill: var(--like-fill-color);
-}
-
-.like-icon.is-liked .heart {
-  fill: var(--like-fill-color);
-  animation: heart-scale .3s .1s ease-in alternate;
-  transform-origin: center;
-}
-
-@keyframes heart-scale {
-  0% {
-      transform: scale(1);
-    }
-    
-  100% {
-      transform: scale(1.5);
-    }  
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparks-opacity .3s .3s ease-in alternate;
-  transform-origin: center;
-}
-
-@keyframes sparks-opacity {
-  0% {
-      opacity: 0;
-    }
-    
-  100% {
-      opacity: 100%;
-    }  
+  padding: 10px 17px;
 }
 
 .content__button::before {    
@@ -400,7 +294,7 @@
   height: 100%;
   position: absolute;
   inset: 0;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #000);
   transition: 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;  
@@ -410,71 +304,61 @@
   transform: scaleX(1);
 }
 
-.card__like-button:focus {
+.content__button:focus {
   outline: none;
-  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.content__button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color, #000);
 }
 
 .button__text {
   position: relative;
-  color: var(--button-text-color);
+  color: var(--button-text-color, #000);
   mix-blend-mode: difference;
 }
 
-.footer {
-  width: calc(max-content);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer__button {
-  padding: 0;
-  position: relative;
+.save__button {
+  padding: 15px 18px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  width: 355px;
-  height: 55px;
-  font-family: var(--accent-font);
-  font-size: 14px;
-  background-color: var(--background-color);
-  border: 2px solid var(--accent-color);
-  transition: 0.3s ease;
-  cursor: pointer;
+  background-color: var(--background-color, #fff);  
 }
 
 .svg-floppy {
   position: relative;
-  color: var(--button-text-color);
+  color: var(--button-text-color, #000);
   mix-blend-mode: difference;
-}
-
-.floppy:hover {
-  stroke: #000;
+  flex-shrink: 0;
 }
 
 .footer__button:focus {
   outline: none;
-  box-shadow: 2px 2px 0 var(--accent-color);
+  box-shadow: 2px 2px 0 var(--accent-color, #000);
 }
 
 .dialog::backdrop {
   background-color: #00000075;
 }
 
-.dialog[open] {
-  width: 353px;
-  height: 191px;
+.dialog {
+  margin-top: auto;
+  margin-left: auto;
+  width: 357px;
   padding: 30px;
+  background-color: var(--background-color, #fff);
+  border: 2px solid var(--accent-color, #000);
+}
+
+.dialog[open] {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   gap: 30px;
-  background-color: var(--background-color);
-  border: 2px solid var(--accent-color);
 }
 
 .dialog__title-block {
@@ -485,34 +369,49 @@
   align-items: center;
   gap: 20px;
   width: 100%;  
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   line-height: 21px;
-  background-color: var(--background-color);  
+  background-color: var(--background-color, #fff);  
 }
 
+/* параметры текста диалогового окна по макету:
+font-family: Press Start 2P;
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+text-align: left; */
+
 .dialog__title {
-  color: var(--accent-color);
+  color: var(--accent-color, #000);
   font-size: 14px;
   line-height: 21px;
-  text-transform: uppercase;
 }
 
 .close-button {
   position: relative;
-  width: 100%;
-  height: 38px;
-  font-family: var(--accent-font);
-  font-size: 14px;
-  background-color: var(--background-color);
-  border: 2px solid var(--accent-color);
-  transition: 0.3s ease;
-  cursor: pointer;
-  text-transform: uppercase;
+  padding: 10px 17px;
+  background-color: var(--background-color, #fff);
 }
 
 @media (width <= 375px) {
-  .section__cover {    
-    background-image: url(../images/car_371-371.png);    
+  
+  .save__button {
+    flex-direction: column;
+    width: 306px; 
   }
+  
+  .svg-floppy-save {
+    width: 28px;
+    height: 28px;
+  }
+
+  .section__label {    
+    top: 25px;
+    right: 13px;
+  }
+  
+  .dialog {
+    width: 100%;
+  }  
 }
