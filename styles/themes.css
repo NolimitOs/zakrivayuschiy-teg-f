@@ -6,10 +6,6 @@
 */
 
 :root.theme-light {
-  --main-font: 'Inter-Variable';
-  --accent-font: 'PressStart2P-Regular';
-  --main-font-weight: 400;
-  --accent-font-weight: 700;
   --background-color: #fff;
   --accent-color: #000;
   --like-contour-color: #000;
@@ -22,8 +18,6 @@
 }
 
 :root.theme-dark {
-  --main-font: 'Inter-Variable';
-  --accent-font: 'PressStart2P-Regular';
   --main-font-weight: 465;
   --accent-font-weight: 785;
   --background-color: #000;
@@ -39,8 +33,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-font: 'Inter-Variable';
-    --accent-font: 'PressStart2P-Regular';
     --main-font-weight: 465;
     --accent-font-weight: 785;
     --background-color: #000;

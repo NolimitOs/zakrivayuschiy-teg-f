@@ -18,7 +18,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   max-inline-size: 100%;
-  padding: 100px 0 0 0;
+  padding: 100px 0 103px 0;
   font-family: var(--main-font, sans-serif);
   font-variation-settings: 'wght' var(--main-font-weight, 400);
   color: var(--accent-color, #000); 
@@ -336,29 +336,23 @@
   flex-shrink: 0;
 }
 
-.footer__button:focus {
-  outline: none;
-  box-shadow: 2px 2px 0 var(--accent-color, #000);
-}
-
 .dialog::backdrop {
-  background-color: #00000075;
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 .dialog {
-  margin-top: auto;
-  margin-left: auto;
+  margin: auto;
   width: 357px;
   padding: 30px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 30px;
   background-color: var(--background-color, #fff);
   border: 2px solid var(--accent-color, #000);
 }
 
 .dialog[open] {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: 30px;
 }
 
 .dialog__title-block {
@@ -406,8 +400,7 @@ text-align: left; */
     height: 28px;
   }
 
-  .section__label {    
-    top: 25px;
+  .section__label { 
     right: 13px;
   }
   
